@@ -30,6 +30,12 @@
       "name": "GDS Local",
       "documents": [
         {
+          "path": "projects/001-gds-local/ARC-001-REQ-v1.0.md",
+          "title": "Requirements",
+          "category": "Discovery",
+          "documentId": "ARC-001-REQ-v1.0"
+        },
+        {
           "path": "projects/001-gds-local/ARC-001-STKE-v1.0.md",
           "title": "Stakeholder Drivers",
           "category": "Discovery",
