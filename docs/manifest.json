@@ -40,6 +40,12 @@
           "title": "Stakeholder Drivers",
           "category": "Discovery",
           "documentId": "ARC-001-STKE-v1.0"
+        },
+        {
+          "path": "projects/001-gds-local/ARC-001-RSCH-v1.0.md",
+          "title": "Research Findings",
+          "category": "Discovery",
+          "documentId": "ARC-001-RSCH-v1.0"
         }
       ],
       "diagrams": [],
