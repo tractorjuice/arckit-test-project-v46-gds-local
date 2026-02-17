@@ -1,5 +1,5 @@
 {
-  "generated": "2026-02-17T00:00:00Z",
+  "generated": "2026-02-17T14:30:00Z",
   "repository": {
     "owner": "tractorjuice",
     "name": "arckit-test-project-v46-gds-local",
@@ -64,6 +64,12 @@
           "title": "Strategic Outline Business Case",
           "category": "Planning",
           "documentId": "ARC-001-SOBC-v1.0"
+        },
+        {
+          "path": "projects/001-gds-local/ARC-001-PLAN-v1.0.md",
+          "title": "Project Plan",
+          "category": "Planning",
+          "documentId": "ARC-001-PLAN-v1.0"
         }
       ],
       "diagrams": [],
