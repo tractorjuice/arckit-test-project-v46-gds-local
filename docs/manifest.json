@@ -43,9 +43,15 @@
         },
         {
           "path": "projects/001-gds-local/ARC-001-RSCH-v1.0.md",
-          "title": "Research Findings",
+          "title": "Research Findings (Technology)",
           "category": "Discovery",
           "documentId": "ARC-001-RSCH-v1.0"
+        },
+        {
+          "path": "projects/001-gds-local/ARC-001-RSCH-v2.0.md",
+          "title": "Research Findings (Business)",
+          "category": "Discovery",
+          "documentId": "ARC-001-RSCH-v2.0"
         },
         {
           "path": "projects/001-gds-local/ARC-001-RISK-v1.0.md",
