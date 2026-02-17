@@ -1,5 +1,5 @@
 {
-  "generated": "2026-02-16T00:00:00Z",
+  "generated": "2026-02-17T00:00:00Z",
   "repository": {
     "owner": "tractorjuice",
     "name": "arckit-test-project-v46-gds-local",
@@ -30,22 +30,34 @@
       "name": "GDS Local",
       "documents": [
         {
-          "path": "projects/001-gds-local/ARC-001-REQ-v1.0.md",
-          "title": "Requirements",
-          "category": "Discovery",
-          "documentId": "ARC-001-REQ-v1.0"
-        },
-        {
           "path": "projects/001-gds-local/ARC-001-STKE-v1.0.md",
           "title": "Stakeholder Drivers",
           "category": "Discovery",
           "documentId": "ARC-001-STKE-v1.0"
         },
         {
+          "path": "projects/001-gds-local/ARC-001-REQ-v1.0.md",
+          "title": "Requirements",
+          "category": "Discovery",
+          "documentId": "ARC-001-REQ-v1.0"
+        },
+        {
           "path": "projects/001-gds-local/ARC-001-RSCH-v1.0.md",
           "title": "Research Findings",
           "category": "Discovery",
           "documentId": "ARC-001-RSCH-v1.0"
+        },
+        {
+          "path": "projects/001-gds-local/ARC-001-RISK-v1.0.md",
+          "title": "Risk Register",
+          "category": "Governance",
+          "documentId": "ARC-001-RISK-v1.0"
+        },
+        {
+          "path": "projects/001-gds-local/ARC-001-SOBC-v1.0.md",
+          "title": "Strategic Outline Business Case",
+          "category": "Planning",
+          "documentId": "ARC-001-SOBC-v1.0"
         }
       ],
       "diagrams": [],
