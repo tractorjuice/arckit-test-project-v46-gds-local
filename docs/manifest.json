@@ -1,5 +1,5 @@
 {
-  "generated": "2026-02-25T12:00:00Z",
+  "generated": "2026-02-26T12:00:00Z",
   "repository": {
     "owner": "tractorjuice",
     "name": "arckit-test-project-v46-gds-local",
@@ -29,7 +29,7 @@
       "path": "docs/guides/research.md",
       "title": "Technology Research Guide",
       "category": "Discovery",
-      "status": "beta"
+      "status": "live"
     },
     {
       "path": "docs/guides/datascout.md",
@@ -177,7 +177,7 @@
     },
     {
       "path": "docs/guides/data-quality-framework.md",
-      "title": "UK Government Data Quality Framework — ArcKit Reference Guide",
+      "title": "UK Government Data Quality Framework",
       "category": "Governance",
       "status": "beta"
     },
@@ -243,19 +243,19 @@
     },
     {
       "path": "docs/guides/govs-007-security.md",
-      "title": "GovS 007: Security — ArcKit Reference Guide",
+      "title": "GovS 007: Security",
       "category": "Compliance",
       "status": "beta"
     },
     {
       "path": "docs/guides/national-data-strategy.md",
-      "title": "UK National Data Strategy — ArcKit Reference Guide",
+      "title": "UK National Data Strategy",
       "category": "Compliance",
       "status": "beta"
     },
     {
       "path": "docs/guides/codes-of-practice.md",
-      "title": "UK Government Codes of Practice — ArcKit Reference Guide",
+      "title": "UK Government Codes of Practice",
       "category": "Compliance",
       "status": "beta"
     },
@@ -398,22 +398,28 @@
       "status": "experimental"
     },
     {
+      "path": "docs/guides/start.md",
+      "title": "Getting Started with ArcKit",
+      "category": "Other",
+      "status": "live"
+    },
+    {
       "path": "docs/guides/mcp-servers.md",
       "title": "ArcKit Plugin Setup Guide",
       "category": "Other",
-      "status": "beta"
-    },
-    {
-      "path": "docs/guides/remote-control.md",
-      "title": "Govern Architecture from Anywhere: Using Claude Code Remote Control with ArcKit",
-      "category": "Other",
-      "status": "beta"
+      "status": "live"
     },
     {
       "path": "docs/guides/productivity.md",
       "title": "Architecture Productivity Guide",
       "category": "Other",
-      "status": "beta"
+      "status": "live"
+    },
+    {
+      "path": "docs/guides/remote-control.md",
+      "title": "Govern Architecture from Anywhere",
+      "category": "Other",
+      "status": "live"
     }
   ],
   "roleGuides": [
@@ -528,17 +534,18 @@
   ],
   "global": [
     {
-      "path": "projects/000-global/ARC-000-PRIN-v1.0.md",
-      "title": "Architecture Principles v1.0",
-      "category": "Architecture",
-      "documentId": "ARC-000-PRIN-v1.0"
-    },
-    {
       "path": "projects/000-global/ARC-000-PRIN-v1.1.md",
-      "title": "Architecture Principles v1.1",
+      "title": "Architecture Principles",
       "category": "Architecture",
       "documentId": "ARC-000-PRIN-v1.1",
       "isDefault": true
+    },
+    {
+      "path": "projects/000-global/ARC-000-PRIN-v1.0.md",
+      "title": "Architecture Principles (v1.0)",
+      "category": "Architecture",
+      "documentId": "ARC-000-PRIN-v1.0",
+      "isDefault": false
     }
   ],
   "globalExternal": [],
@@ -549,10 +556,10 @@
       "name": "GDS Local",
       "documents": [
         {
-          "path": "projects/001-gds-local/ARC-001-REQ-v1.0.md",
-          "title": "Requirements",
-          "category": "Discovery",
-          "documentId": "ARC-001-REQ-v1.0"
+          "path": "projects/001-gds-local/ARC-001-PLAN-v1.0.md",
+          "title": "Project Plan",
+          "category": "Planning",
+          "documentId": "ARC-001-PLAN-v1.0"
         },
         {
           "path": "projects/001-gds-local/ARC-001-STKE-v1.0.md",
@@ -561,16 +568,10 @@
           "documentId": "ARC-001-STKE-v1.0"
         },
         {
-          "path": "projects/001-gds-local/ARC-001-RSCH-v1.0.md",
-          "title": "Technology Research",
-          "category": "Discovery",
-          "documentId": "ARC-001-RSCH-v1.0"
-        },
-        {
-          "path": "projects/001-gds-local/ARC-001-RSCH-v2.0.md",
-          "title": "Business Research",
-          "category": "Discovery",
-          "documentId": "ARC-001-RSCH-v2.0"
+          "path": "projects/001-gds-local/ARC-001-RISK-v1.0.md",
+          "title": "Risk Register",
+          "category": "Governance",
+          "documentId": "ARC-001-RISK-v1.0"
         },
         {
           "path": "projects/001-gds-local/ARC-001-SOBC-v1.0.md",
@@ -579,19 +580,32 @@
           "documentId": "ARC-001-SOBC-v1.0"
         },
         {
-          "path": "projects/001-gds-local/ARC-001-PLAN-v1.0.md",
-          "title": "Project Plan",
-          "category": "Planning",
-          "documentId": "ARC-001-PLAN-v1.0"
+          "path": "projects/001-gds-local/ARC-001-REQ-v1.0.md",
+          "title": "Requirements",
+          "category": "Discovery",
+          "documentId": "ARC-001-REQ-v1.0"
         },
         {
-          "path": "projects/001-gds-local/ARC-001-RISK-v1.0.md",
-          "title": "Risk Register",
-          "category": "Governance",
-          "documentId": "ARC-001-RISK-v1.0"
+          "path": "projects/001-gds-local/ARC-001-RSCH-v1.0.md",
+          "title": "Research Findings (v1.0)",
+          "category": "Discovery",
+          "documentId": "ARC-001-RSCH-v1.0"
+        },
+        {
+          "path": "projects/001-gds-local/ARC-001-RSCH-v2.0.md",
+          "title": "Research Findings",
+          "category": "Discovery",
+          "documentId": "ARC-001-RSCH-v2.0"
         }
       ],
-      "diagrams": [],
+      "diagrams": [
+        {
+          "path": "projects/001-gds-local/diagrams/ARC-001-DIAG-001-v1.0.md",
+          "title": "System Context Diagram",
+          "documentId": "ARC-001-DIAG-001-v1.0"
+        }
+      ],
+      "research": [],
       "decisions": [],
       "wardleyMaps": [],
       "dataContracts": [],
