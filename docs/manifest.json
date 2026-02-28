@@ -590,6 +590,12 @@
           "documentId": "ARC-001-SOBC-v1.0"
         },
         {
+          "path": "projects/001-gds-local/ARC-001-SVCASS-v1.0.md",
+          "title": "Service Assessment Preparation",
+          "category": "Compliance",
+          "documentId": "ARC-001-SVCASS-v1.0"
+        },
+        {
           "path": "projects/001-gds-local/ARC-001-RISK-v1.0.md",
           "title": "Risk Register",
           "category": "Governance",
