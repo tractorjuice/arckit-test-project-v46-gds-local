@@ -1424,6 +1424,33 @@
             }
         }
 
+        /* Version Badge */
+        .app-version-badge {
+            font-size: 11px;
+            color: var(--text-inverse);
+            opacity: 0.5;
+            padding: 2px 6px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 3px;
+            font-family: monospace;
+            white-space: nowrap;
+        }
+
+        /* Icon Links (repo, etc.) */
+        .app-icon-link {
+            color: var(--text-inverse);
+            opacity: 0.7;
+            display: flex;
+            align-items: center;
+            padding: 4px;
+            transition: opacity 0.2s;
+            text-decoration: none;
+        }
+
+        .app-icon-link:hover {
+            opacity: 1;
+        }
+
         /* Theme Toggle */
         .app-theme-toggle {
             background: transparent;
@@ -1472,8 +1499,13 @@
                 <a href="#dashboard" id="dashboard-link" class="app-header__dashboard-link">Dashboard</a>
                 <a href="#guides" id="guides-link" class="app-header__guides-link">Guides</a>
                 <a href="#roles" id="roles-link" class="app-header__guides-link">Roles</a>
-                <a href="https://github.com/tractorjuice/arckit-test-project-v46-gds-local" target="_blank" rel="noopener">GitHub</a>
                 <a href="https://tractorjuice.github.io/arc-kit/">ArcKit</a>
+                <span class="app-version-badge">v2.15.1</span>
+                <a href="{{REPO_URL}}" target="_blank" rel="noopener" class="app-icon-link" aria-label="Repository" title="Repository">
+                    <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                </a>
                 <button class="app-theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
                     <svg class="app-theme-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle class="theme-sun" cx="12" cy="12" r="5"/>
@@ -1581,9 +1613,8 @@
         // Configuration - UPDATE THESE VALUES
         // ============================================
         const CONFIG = {
-            owner: 'tractorjuice',           // GitHub username/org
             repo: 'arckit-test-project-v46-gds-local',             // Repository name
-            branch: 'main'          // Branch name (usually 'main')
+            contentBaseUrl: 'https://raw.githubusercontent.com/tractorjuice/arckit-test-project-v46-gds-local/main'  // Fallback base URL for GitHub Pages (raw.githubusercontent.com)
         };
 
         // ============================================
@@ -1605,11 +1636,11 @@
         }
 
         function getRawUrl(path) {
-            return `https://raw.githubusercontent.com/${CONFIG.owner}/${CONFIG.repo}/${CONFIG.branch}/${path}`;
+            return `../${path}`;
         }
 
-        function getGitHubUrl(path) {
-            return `https://github.com/${CONFIG.owner}/${CONFIG.repo}/blob/${CONFIG.branch}/${path}`;
+        function getFallbackUrl(path) {
+            return CONFIG.contentBaseUrl ? `${CONFIG.contentBaseUrl}/${path}` : null;
         }
 
         function getDocumentId(path) {
@@ -2789,7 +2820,13 @@
                 if (documentCache.has(path)) {
                     markdown = documentCache.get(path);
                 } else {
-                    const response = await fetch(getRawUrl(path));
+                    let response = await fetch(getRawUrl(path));
+                    if (!response.ok) {
+                        const fallback = getFallbackUrl(path);
+                        if (fallback) {
+                            response = await fetch(fallback);
+                        }
+                    }
                     if (!response.ok) {
                         throw new Error(response.status === 404 ? 'not_found' : `fetch_error_${response.status}`);
                     }
@@ -2871,26 +2908,36 @@
                 document.getElementById('main-content').scrollTo(0, 0);
 
             } catch (error) {
-                const githubUrl = getGitHubUrl(path);
-                const isPrivateRepo = error.message === 'not_found' || error.message.startsWith('fetch_error');
-                content.innerHTML = `
-                    <div class="app-doc-header">
-                        <div class="app-doc-breadcrumb">${path.split('/').slice(0, -1).join(' / ')}</div>
-                        <h1 class="app-doc-title">${extractTitle(path)}</h1>
-                    </div>
-                    <div style="background:var(--background-light);border-left:4px solid var(--primary-color);padding:1.25rem;margin:1.5rem 0;">
-                        <p style="margin:0 0 0.75rem 0;font-weight:700;">This document cannot be displayed inline</p>
-                        <p style="margin:0 0 1rem 0;color:var(--text-muted);">
-                            ${isPrivateRepo
-                                ? 'This is likely a private repository. Documents from private repos require GitHub authentication, which is not available to the browser on GitHub Pages.'
-                                : error.message}
-                        </p>
-                        <a href="${githubUrl}" target="_blank" rel="noopener"
-                           style="display:inline-block;background:var(--primary-color);color:var(--text-inverse);padding:0.5rem 1rem;text-decoration:none;font-weight:700;">
-                            View on GitHub &rarr;
-                        </a>
-                    </div>
-                `;
+                // Build error UI using safe DOM methods
+                const header = document.createElement('div');
+                header.className = 'app-doc-header';
+                const breadcrumb = document.createElement('div');
+                breadcrumb.className = 'app-doc-breadcrumb';
+                breadcrumb.textContent = path.split('/').slice(0, -1).join(' / ');
+                const title = document.createElement('h1');
+                title.className = 'app-doc-title';
+                title.textContent = extractTitle(path);
+                header.appendChild(breadcrumb);
+                header.appendChild(title);
+
+                const notice = document.createElement('div');
+                notice.style.cssText = 'background:var(--background-light);border-left:4px solid var(--primary-color);padding:1.25rem;margin:1.5rem 0;';
+                const heading = document.createElement('p');
+                heading.style.cssText = 'margin:0 0 0.75rem 0;font-weight:700;';
+                heading.textContent = 'Document not found';
+                const detail = document.createElement('p');
+                detail.style.cssText = 'margin:0;color:var(--text-muted);';
+                const detailText = document.createTextNode('The file ');
+                const code = document.createElement('code');
+                code.textContent = path;
+                const detailText2 = document.createTextNode(' could not be loaded. Check that the file exists and the site has been deployed correctly.');
+                detail.appendChild(detailText);
+                detail.appendChild(code);
+                detail.appendChild(detailText2);
+                notice.appendChild(heading);
+                notice.appendChild(detail);
+
+                content.replaceChildren(header, notice);
             }
         }
 

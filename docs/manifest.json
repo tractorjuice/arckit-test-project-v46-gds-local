@@ -1,9 +1,7 @@
 {
-  "generated": "2026-02-26T12:00:00Z",
+  "generated": "2026-02-28T12:00:00Z",
   "repository": {
-    "owner": "tractorjuice",
-    "name": "arckit-test-project-v46-gds-local",
-    "branch": "main"
+    "name": "arckit-test-project-v46-gds-local"
   },
   "defaultDocument": "projects/000-global/ARC-000-PRIN-v1.1.md",
   "guides": [
@@ -29,7 +27,7 @@
       "path": "docs/guides/research.md",
       "title": "Technology Research Guide",
       "category": "Discovery",
-      "status": "live"
+      "status": "beta"
     },
     {
       "path": "docs/guides/datascout.md",
@@ -401,25 +399,25 @@
       "path": "docs/guides/start.md",
       "title": "Getting Started with ArcKit",
       "category": "Other",
-      "status": "live"
+      "status": "beta"
     },
     {
       "path": "docs/guides/mcp-servers.md",
       "title": "ArcKit Plugin Setup Guide",
       "category": "Other",
-      "status": "live"
+      "status": "beta"
     },
     {
       "path": "docs/guides/productivity.md",
       "title": "Architecture Productivity Guide",
       "category": "Other",
-      "status": "live"
+      "status": "beta"
     },
     {
       "path": "docs/guides/remote-control.md",
       "title": "Govern Architecture from Anywhere",
       "category": "Other",
-      "status": "live"
+      "status": "beta"
     }
   ],
   "roleGuides": [
@@ -556,34 +554,16 @@
       "name": "GDS Local",
       "documents": [
         {
-          "path": "projects/001-gds-local/ARC-001-PLAN-v1.0.md",
-          "title": "Project Plan",
-          "category": "Planning",
-          "documentId": "ARC-001-PLAN-v1.0"
+          "path": "projects/001-gds-local/ARC-001-REQ-v1.0.md",
+          "title": "Requirements",
+          "category": "Discovery",
+          "documentId": "ARC-001-REQ-v1.0"
         },
         {
           "path": "projects/001-gds-local/ARC-001-STKE-v1.0.md",
           "title": "Stakeholder Drivers",
           "category": "Discovery",
           "documentId": "ARC-001-STKE-v1.0"
-        },
-        {
-          "path": "projects/001-gds-local/ARC-001-RISK-v1.0.md",
-          "title": "Risk Register",
-          "category": "Governance",
-          "documentId": "ARC-001-RISK-v1.0"
-        },
-        {
-          "path": "projects/001-gds-local/ARC-001-SOBC-v1.0.md",
-          "title": "Strategic Outline Business Case",
-          "category": "Planning",
-          "documentId": "ARC-001-SOBC-v1.0"
-        },
-        {
-          "path": "projects/001-gds-local/ARC-001-REQ-v1.0.md",
-          "title": "Requirements",
-          "category": "Discovery",
-          "documentId": "ARC-001-REQ-v1.0"
         },
         {
           "path": "projects/001-gds-local/ARC-001-RSCH-v1.0.md",
@@ -596,6 +576,24 @@
           "title": "Research Findings",
           "category": "Discovery",
           "documentId": "ARC-001-RSCH-v2.0"
+        },
+        {
+          "path": "projects/001-gds-local/ARC-001-PLAN-v1.0.md",
+          "title": "Project Plan",
+          "category": "Planning",
+          "documentId": "ARC-001-PLAN-v1.0"
+        },
+        {
+          "path": "projects/001-gds-local/ARC-001-SOBC-v1.0.md",
+          "title": "Strategic Outline Business Case",
+          "category": "Planning",
+          "documentId": "ARC-001-SOBC-v1.0"
+        },
+        {
+          "path": "projects/001-gds-local/ARC-001-RISK-v1.0.md",
+          "title": "Risk Register",
+          "category": "Governance",
+          "documentId": "ARC-001-RISK-v1.0"
         }
       ],
       "diagrams": [
