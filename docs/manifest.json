@@ -1,5 +1,5 @@
 {
-  "generated": "2026-02-28T22:54:21.332Z",
+  "generated": "2026-03-01T09:31:51.985Z",
   "repository": {
     "name": "arckit-test-project-v46-gds-local"
   },
@@ -545,6 +545,57 @@
       "documentId": "ARC-000-PRIN-v1.1"
     }
   ],
+  "typeCategories": {
+    "REQ": "Discovery",
+    "STKE": "Discovery",
+    "RSCH": "Discovery",
+    "DSCT": "Discovery",
+    "SOBC": "Planning",
+    "PLAN": "Planning",
+    "ROAD": "Planning",
+    "STRAT": "Planning",
+    "BKLG": "Planning",
+    "PRIN": "Architecture",
+    "HLDR": "Architecture",
+    "DLDR": "Architecture",
+    "DATA": "Architecture",
+    "WARD": "Architecture",
+    "DIAG": "Architecture",
+    "DFD": "Architecture",
+    "ADR": "Architecture",
+    "PLAT": "Architecture",
+    "RISK": "Governance",
+    "TRAC": "Governance",
+    "PRIN-COMP": "Governance",
+    "CONF": "Governance",
+    "PRES": "Governance",
+    "ANAL": "Governance",
+    "GAPS": "Governance",
+    "TCOP": "Compliance",
+    "SECD": "Compliance",
+    "SECD-MOD": "Compliance",
+    "AIPB": "Compliance",
+    "ATRS": "Compliance",
+    "DPIA": "Compliance",
+    "JSP936": "Compliance",
+    "SVCASS": "Compliance",
+    "SNOW": "Operations",
+    "DEVOPS": "Operations",
+    "MLOPS": "Operations",
+    "FINOPS": "Operations",
+    "OPS": "Operations",
+    "SOW": "Procurement",
+    "EVAL": "Procurement",
+    "DOS": "Procurement",
+    "GCLD": "Procurement",
+    "GCLC": "Procurement",
+    "DMC": "Procurement",
+    "VEND": "Procurement",
+    "AWRS": "Research",
+    "AZRS": "Research",
+    "GCRS": "Research",
+    "STORY": "Other"
+  },
   "globalPolicies": [
     {
       "path": "projects/000-global/policies/README.md",
@@ -568,6 +619,18 @@
           "title": "Analysis Report",
           "category": "Governance",
           "documentId": "ARC-001-ANAL-v2.0"
+        },
+        {
+          "path": "projects/001-gds-local/ARC-001-ANAL-v3.0.md",
+          "title": "Analysis Report",
+          "category": "Governance",
+          "documentId": "ARC-001-ANAL-v3.0"
+        },
+        {
+          "path": "projects/001-gds-local/ARC-001-DATA-v1.0.md",
+          "title": "Data Model",
+          "category": "Architecture",
+          "documentId": "ARC-001-DATA-v1.0"
         },
         {
           "path": "projects/001-gds-local/ARC-001-PLAN-v1.0.md",
@@ -607,7 +670,7 @@
         },
         {
           "path": "projects/001-gds-local/ARC-001-STKE-v1.0.md",
-          "title": "Stakeholder Drivers",
+          "title": "Stakeholder Analysis",
           "category": "Discovery",
           "documentId": "ARC-001-STKE-v1.0"
         },
